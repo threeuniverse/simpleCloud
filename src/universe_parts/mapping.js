@@ -1,6 +1,6 @@
 defineThreeUniverse(function () {
 
-    let local_part = "https://threeuniverse.org/";
+    let local_part = "src/universe_parts";
 
     let maping = [
        
@@ -59,6 +59,12 @@ defineThreeUniverse(function () {
             position: { x: 600, z: 100 },
             credits: "https://www.turbosquid.com/",
             url: "https://threeuniverse.github.io/PartUniverse/src/universe_parts/hut.js",
+        },
+
+        {
+            position: { x:-6639,z:792},
+            credits: "https://www.turbosquid.com/",
+            url: "src/universe_parts/cloud.js",
         },
 
 
