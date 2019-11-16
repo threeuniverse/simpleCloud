@@ -4,11 +4,7 @@ defineThreeUniverse(function (THREE,UNIVERSE,SPACE) {
     return new Promise(function (resolve) {
 
       
-        var geometry = new THREE.BoxGeometry( 40, 10, 30 );
-        var material = new THREE.MeshStandardMaterial( {color: 0x00ff00} );
-        var cube = new THREE.Mesh( geometry, material );
-        cube.position.set(0,500,0);
-
+        
 
 
         let prg = UNIVERSE.seedrandom("cloud 500 ft");
