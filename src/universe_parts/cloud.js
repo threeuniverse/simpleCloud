@@ -14,19 +14,26 @@ defineThreeUniverse(function (THREE,UNIVERSE,SPACE) {
         let prg = UNIVERSE.seedrandom("cloud 500 ft");
 
         let obj = new THREE.Object3D();
-
-
-        for (let index = 0; index < 20; index++) {
-
-            let clone = cube.clone();
-            clone.rotateY(prg() * Math.PI * 2);
-            clone.position.set(prg() * 300 - 150, 500, prg() * 300 - 150);
-            obj.add(clone);
-
-        }
         
+        SPACE.loadMTLNObject('resource/cloud/cloud.obj').then(cube => {
 
-        resolve(obj);
+
+
+            for (let index = 0; index < 20; index++) {
+
+                let clone = cube.clone();
+                clone.rotateY(prg() * Math.PI * 2);
+                clone.position.set(prg() * 800 - 400, 750, prg() * 800 - 400);
+                obj.add(clone);
+
+            }
+            
+
+            resolve(obj);
+
+        })
+
+
       
     });
 });
